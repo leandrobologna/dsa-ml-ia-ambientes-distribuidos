@@ -1,0 +1,164 @@
+1. Inteligências Artificial X Machine Learning X Deep Learning
+    1.1. Inteligencia Artificial
+        - Tentativa de reproduzir a inteligência humana nas máquinas.
+
+    1.2. Machine Learning
+        - Utilização de algoritmos em dados para gerar um modelo (função matemática) para realizar
+        predições.
+
+    1.3. Deep Leraning
+        - Utilização de redes neurais em dados para gerar um modelo (função matemática) para realizar
+        predições mais profundas nos dados. Muito utilizado em visão computacional...
+    
+
+2. Papel do Engenheiro e Cientista de Dados no Processo de Machine Learning
+    2.1. Cientista de Dados
+        - Profissional que deve conhecer e dominar Matemática/Estatística, Análise de Dados, Programação, 
+        Machine Learning/IA.
+    
+    2.2. Engenheiro de Dados
+        - Aquisição, Armazenamento e Processamento de Dados, Sistemas Distribuídos, Data Pipeline.
+
+    2.3. Intersecção Entre os Dois Perfis
+        - Big Data, Análise de Dados e Programação.
+
+3. Processamento Paralelo em Ambientes Distribuídos
+    - Sistemas que Interligam vários nós de processamento, de modo que um processo de grande consumo seja executado no nó 
+    "mais disponível", ou subdvidido por vários nós.
+    - "Coleção de computadores independentes entre si que se apresenta ao usuário como um sistema único e coerente" - Andrew Tanenbaum
+
+4. Diferenças entre CPU X GPU
+    4.1. CPU (Central Process Unit)
+        - Projetadas para fornecer processamento de baixa latência para vários aplicativos.
+        - Possui limitações quanto ao cores dentro dos chips.
+    
+    4.2. GPU (Graphical Process Unit)
+        - Projetar para fornecer processamento em imagem, jogos e aplicações de machine learning.
+        - Possui centenas/milhares de cores dentro dos chips.
+        - Possui limitações quanto as memórias internas, pois possui pouca memória.
+
+5. Programação Paralela
+    5.1. Programação Paralela
+        - Desenvolver código que possa ser executado e processado em paralelo.
+        - Sempre que dois processamentos forem independentes, por definição, se pode usar paralelização.
+
+            Exemplo de problema facilmente paralelizável:
+                "dividir o vetor em N partes e mande cada processo realizar a tarefa em uma das partes"
+
+            Exemplo de problema dificilmente paralelizável:
+                "fazer com que cada elemente desse vetor enorme tenha seu valor somado a todos os elementos posteriores a ele"
+
+            Computaçõpes "obviamente paralelizáveis":
+                - Renderizar imagens 3D no qual cada processador pode ser responsável por um pedação diferente da tela.
+                - Alguns algoritmos numéricos como multiplicação de vetores e matrizes, cada processador pode ficar 
+                  responsável por um trecho do vetor ou matriz seprado e dá pra juntar as contas parciais no final 
+                  (o que ocorre em modelos de Deep Learning).
+                - Compilar um programa com vários módulos, é possível usar paralelismo para compilar mais de um módulo ao mesmo tempo.
+
+        5.1.1. Concorrência
+            - É quando o servidor atende a vários clientes escalando um determinado tempo para atender cada um.
+        
+        5.1.2. Paralelismo
+            - É quando vários servidores atendem vários clientes ao mesmo tempo, reduzindo o tempo de resposta para os clientes.
+            - Escrever progamas que utilizem paralelismo é um pouco diferente de escrever programas para execução sequencial, como estamos
+              mais acostumados a fazer. Pois, temos que escolher que partes do programa utilizarão código que serão executados em paralelo.
+
+    5.2. Processamento Paralelo
+        - Executar o código de forma paralela em GPU, CPU ou em ambientes distribuídos. 
+    
+    5.3. Ambientes Distribuídos
+        - Conjunto de máquinas para processamento paralelo e armazenamento distribuido.
+
+6. Medida de Desempenho Teraflop/s (FLOPS - FLoating-point Operations Per Second)
+    - Avaliar o desempenho de um computador ou ambiente distribuido.
+
+7. O que são Microserviços
+    - Arquitetura de desenvolvimento de software.
+
+    7.1. Arquitetura Monolítica
+        7.1.1. Vantagens
+            - Simplicidade da arquitetura: Não existem muitas camadas com o que se preocupar.
+            - Agregação de tecnologia: Toda a aplicação é desaenvolvida em uma mesma tecnologia, 
+              facilitando a coesão da equipe.
+            - Fluxo de publicação simples: Alterou? Compilou? É só publicar.
+            - Rápido desenvolvimento: Por ser uma arquitetura mais simples, o seu desenvolvimento tende
+              a ser muito mais rápido.
+        
+        7.1.2. Desvantages
+            - Agregação de tecnologia.
+            - Único ponto de falha: problema no sistema de newsletters? Não conseguimos fazer o pagamento dos 
+              funcionários porque o sistema de folha não funciona.
+            - Baixa escalabilidade: Temos que copiar TODA a stack (aplicação) para escalar horizontalmente.
+            - Base de código gigante: Quanto maior o sistema, maior é a base de código, já que está tudo no mesmo lugar.
+            - Desperdício de esforço: Imagine que você tenha que mudar o texto de uma das telas de uma aplicação Monolítica
+              de 50000 linhas, quando você for publicar isso, ela vai ter que ser totalmente recompilada, tudo isso por causa de
+              um texto, será que valeu a pena?
+    
+    7.2. Arquitetura Microserviços
+        - É um estilo arquitetônico que estrutura uma solução como uma coleção de serviços ligeiramente acoplados, que 
+          implementam capacidades empresariais.
+        - "Uma abordagem que desenvolve um aplicativo único como uma suíte de pequenos serviços..." (Martin Fowler, 2014)
+        - Em geral, um microserviço é um sistema simples (geralmente uma API) que se comunica através de mecanismos leves
+          (como o HTTP). Estes pequenos sistemas devem ser totalmente autônomos, ou seja, devem possuir sistemas de deploy
+          totalmente independentes e totalmente automáticos.
+
+        7.2.1. Vantagens
+            - Sistemas totalmente independentes.
+            - Serviços coesos e desacoplados.
+            - Ausência de um ponto de falha único.
+            - Facilidade de deploy e testes unitários.
+            - Arquitetura individual simples.
+            - Mecanismo de comunicação universal e leve.
+            - Não se prende a uma tecnologia específica.
+
+        7.2.2. Desvantagens
+            - Arquitetura geral pode se tornar complexa se não for bem documentada.
+            - Se não for bem planejado e bem executado, pode se transformar em uma grande bagunça.
+            - A ausência de uma documentação que descreva o escopo global pode onerar a visualização geral do sistema.
+            - Em um início de projeto, os problemas resolvidos por esta arquitetura são inexistentes. Portanto um dos grandes
+              desafios é saber em qual parte do ciclo do projeto ela deve ser implementada, isto demanda mais tempo de
+              desenvolvimento.
+            - O desenvolvimento de recursos novos que abrangem mais de um serviço devem ser cuidadosamente orquestrados em
+              em todas as equipes.
+
+        7.2.3. Infraestrutura
+            - Kubernetes: Sistema de orquestração de containers Docker. Ideal para a orquestração de microserviços pois é 
+              baseado totalmente em API'S e ele próprio é dividido em diversos hosts (se tornando um microserviço em si), 
+              muito fácil de instalar e utilizar. Agnóstico de infraestrutura, pode ser executado em diversos provedores.
+            
+            - AWS ECS: Serviço de containers hospedado pela AWS (muito similar ao kubernetes, em sua própria forma).
+
+            - Apache Mesos + Marathon + ZooKeeper: Abstrai as configurações de diversos computadores e transforme em 
+              um único "supercomputador".
+
+8. REST API's 
+    - É um estilo de arquitetura para transferência de informação, que realiza operações no padrão HTTP..
+    - Pode tratar diferentes tipos de dados, sendo XML e JSON os mais comuns.
+    - É um termo definido por Roy Fielding em sua tese de mestrado no qual ele descreve sobre um estilo de arquitetura de
+      software sobre um sistema operado em rede.
+    - REST é um acrônimo para "Tranferência de Estado Representacional" (REpresentational State Transfer).
+
+9. Como Publicar Modelos de Machine Learning em Produção
+    - Deploy do Modelo em Produção é o processo de fazer o modelo resolver o problema para o qual ele foi criado.
+    - Para fazer o Deploy do modelo em produção, você precisa criar uma aplicação que faça a leitura do resultado do modelo e
+      entregue ao usuário final (ou a outra aplicação) esse resultado.
+    
+    9.1. Componentes de um Pipeline para Machine Learning
+    - Machine Learning:
+        - version control
+        - build
+        - unit test
+    
+    - Aplicação:
+        - deploy
+        - autotest
+        - deploy to production
+        - measure and validate
+    
+    9.2. Como fazer o deploy
+        - Deploy do Modelo em nuvem com GCP, AWS ou Azure.
+        - Aplicação Web com o Framework Web Flask (para linguagem Python), por exemplo.
+        - Deploy do Modelo com TensorFlow Serving.
+        - Criar uma REST API para nosso modelo já treinado.
+        - Desenvolver uma aplicação em qualquer outra linguagem e usar JSON para entregar os resultados das previsões.
+        
