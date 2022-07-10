@@ -1,0 +1,13 @@
+1. Apache Spark
+    "É um motor para processamento de dados em larga escala de forma distribuída em memória"
+    (Apache Spark)
+
+    - Driver Program:
+        - Spark Context
+    
+    - Cluster Manager:
+
+    - Node Manager:
+        - Executor:
+            - Cache:
+            - Task:

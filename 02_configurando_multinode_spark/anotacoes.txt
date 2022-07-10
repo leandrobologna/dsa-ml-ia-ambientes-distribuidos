@@ -1,0 +1,48 @@
+1. Machine Learning em Larga Escala
+    - Machine Learning Tradicional
+        - Menos de 100 Bilhões de registros
+    
+    - Machine Learning em Larga Escala
+        - Mais de 100 bilhões de registros
+
+2. Compreendendo o Problema e Compreendendo os Dados
+    - A predição que você está tentando fazer (ou decisão que você está tentando tomar)
+      é complexa o suficiente para grantir o uso de ML em primeiro lugar?
+    - Você tem novos dados e dados limpos?
+    - Seus dados possuem rótulos existentes para ajudar uma máquina a entender
+      (aprendizagem supervisionada)?
+    - A sua solução para este problema permite alguma margem de erro?
+        
+    2.1.1. Dicas
+        - Comece com um problema prioritário, não um problema de "teste"!
+        - Você pode fornecer dados, mas todo o contexto deve vir da equipe de Data Science
+          a partir da compreensão do problema de negócios!
+        - Espere alterar, ajustar e mudar para encontrar o ROI.
+
+3. Primeiros Passos para Escalabilidade
+    "Em telecomunicações, infraestrutura de tecnologia da informação e na engenharia de software,
+     escalabilidade é uma característica desejável em todo o sistema, em uma rede ou em um processo,
+     que indica sua capacidade de manipular uma porção crescente de trabalho de forma uniforme, 
+     ou estar preparado para crescer" (Daniel Mendes - Data Science Academy)
+
+     "Escalabilidade é puramente uma habilidade de crescer o seu sistema de maneira horizontal ou vertical."
+      (Daniel Mendes - Data Science Academy)
+
+    3.1. Pode ser medida de vários modos, tais como:
+        - Carga de Escalabilidade: Por exemplo, volume de acessos...
+        - Escalabilidade Geográfica: Por exemplo, escalavél em vários pontos geográficos...
+        - Escalabilidade Administrativa: Por exemplo, fácil de ser usado e administrado...
+    
+    3.2. Tipos de Escalabilidade:
+        - Escalabilidade Horizontal (scale out/in): Adicionar mais nós (máquinas) no ambiente distribuido...
+        - Escalabilidade Vertical (scale up/down): Adicionar mais recursos (hardware) em uma máquina...
+    
+4. O que é uma Aplicação em Larga Escala?
+    4.1. Características de uma Aplicação em Larga Escala:
+        - Distribuída.
+        - Escalavél.
+        - Alta Performance.
+        - Alta Disponibilidade (Não precisa ser 24/7).
+        - Arquitetura Moderna (Microservice é interessante).
+
+
