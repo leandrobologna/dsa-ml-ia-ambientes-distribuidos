@@ -18,13 +18,13 @@ Para a configuração deste Multinode Cluster Spark de Exemplo iremos utilizar o
 # Instalando o Sistema Operacional CentOS nas Virtual Machine
 #### Para a criação da VM é só realizar as configurações conforme imagens abaixo.
 
-![](/dsa-ml-ia-ambientes-distribuidos/02_configurando_multinode_spark/imgs/etapa-1-config-vm.PNG)
+![](/imgs/etapa-1-config-vm.PNG)
 
 #### Escolher o tamanho da memória ram da VM, conforme imagem abaixo.
 
 >Para a configuração de memória ram dos nós do cluster Spark, utilizar metade do máximo de ram e distribuir entre os nós do cluster. Como exemplo, digamos que tenhamos na nossa máquina 16 GB de RAM utilizaremos 4 GB para o SparkMaster e 2 GB para cada um dos SparkSlaves.
 
-![](/dsa-ml-ia-ambientes-distribuidos/02_configurando_multinode_spark/imgs/etapa-2-config-vm.PNG)
+![](/imgs/etapa-2-config-vm.PNG)
 
 #### Escolher a opção "Criar um novo disco rígido virtual agora", conforme imagem abaixo.
 
@@ -32,17 +32,17 @@ Para a configuração deste Multinode Cluster Spark de Exemplo iremos utilizar o
 
 #### Escolher a opção "VMDK (Virtual Machine Disk), conforme imagem abaixo.
 
-![](/dsa-ml-ia-ambientes-distribuidos/02_configurando_multinode_spark/imgs/etapa-4-config-vm.PNG)
+![](/imgs/etapa-4-config-vm.PNG)
 
 #### Escolher a opção "Dinammicamente alocado", conforme imagem abaixo.
 
-![](/dsa-ml-ia-ambientes-distribuidos/02_configurando_multinode_spark/imgs/etapa-5-config-vm.PNG)
+![](/imgs/etapa-5-config-vm.PNG)
 
 #### Escolher o tamanho em GB do disco, conforme imagem abaixo.
 
 >Para a configuração de memória de armazenamento dos nós do cluster Spark, utilizar 64 GB.
 
-![](/dsa-ml-ia-ambientes-distribuidos/02_configurando_multinode_spark/imgs/etapa-6-config-vm.PNG)
+![](/imgs/etapa-6-config-vm.PNG)
 
 # Configurando o SUDOERS e o SSH para acesso aos nós do Cluster via Putty
 >**Observação:**
@@ -146,7 +146,7 @@ sudo yum update -y
 
 #### Para realizar a inclusão dos IP's e DNS edite passando o IP e o DNS no arquivo **/etc/hosts**, conforme imagem abaixo.
 
-![](/dsa-ml-ia-ambientes-distribuidos/02_configurando_multinode_spark/imgs/etapa-7-config-vm.PNG)
+![](/imgs/etapa-7-config-vm.PNG)
 
 ~~~
 sudo vi /etc/hosts
@@ -208,7 +208,7 @@ cat authorized_keys
 
 #### A saída do console deve ser algo parecido com a imagem abaixo
 
-![](/dsa-ml-ia-ambientes-distribuidos/02_configurando_multinode_spark/imgs/etapa-8-config-vm.PNG)
+![](/imgs/etapa-8-config-vm.PNG)
 
 #### Testar a conectividade do NodeMaster com os NodeSlave
 ~~~
@@ -302,7 +302,7 @@ vi workers
 ~~~
 
 #### O arquivo deverá ficar parecido com a imagem abaixo.
-![](/dsa-ml-ia-ambientes-distribuidos/02_configurando_multinode_spark/imgs/etapa-9-config-vm.PNG)
+![](/imgs/etapa-9-config-vm.PNG)
 
 #### Configurar os parâmetros **SPARK_MASTER_HOST** e **JAVA_HOME** do arquivo **spark-env.sh** em todas as máquinas do cluster, conforme abaixo.
 ~~~
@@ -317,7 +317,7 @@ export JAVA_HOME=/opt/jdk
 ~~~
 
 #### O arquivo deverá ficar parecido com a imagem abaixo.
-![](/dsa-ml-ia-ambientes-distribuidos/02_configurando_multinode_spark/imgs/etapa-10-config-vm.PNG)
+![](/imgs/etapa-10-config-vm.PNG)
 
 #### Inicializar o cluster Spark.
 ~~~
@@ -330,4 +330,4 @@ jps
 ~~~
 
 #### A saída do comando será algo parecido com a imagem abaixo.
-![](/dsa-ml-ia-ambientes-distribuidos/02_configurando_multinode_spark/imgs/etapa-11-config-vm.PNG)
+![](/imgs/etapa-11-config-vm.PNG)
