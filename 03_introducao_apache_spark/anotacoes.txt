@@ -1,13 +1,59 @@
-1. Apache Spark
-    "É um motor para processamento de dados em larga escala de forma distribuída em memória"
-    (Apache Spark)
+1. Componentes do Apache Spark
+    - Resilient Distributed Datasets (RDD) - API que oferece a funcionalidade para realizar operações em um ambiente distribuído.
+    - SQL, Dataframes, Datasets - Interface para operação de dados estruturados.
+    - Streaming (DStreams) - Processamento de dados em tempo real.
+    - Machine Learnibng Library (MLlib) - Coleção de algoritmos de Machine Learning.
+    - GraphX - Computação integrada de grafos em Paralelo.
 
-    - Driver Program:
-        - Spark Context
-    
-    - Cluster Manager:
+2. Modos de Execução do Spark:
+    2.1. Standalone
+                    
+        ./bin/spark-shell --master spark://IP:PORT
 
-    - Node Manager:
-        - Executor:
-            - Cache:
-            - Task:
+    2.2. Apache Mesos
+        
+        ./bin/spark-submit \
+            --class org.apache.spark.examples.SparkPi \
+            --master mesos://IP:PORT \
+            --deploy-mode cluster \
+            --supervise \
+            --executor-memory 20G \
+            --total-executor-cores 100 \
+            http://path/to/examples.jar \
+            1000
+
+    2.3. Apache YARN
+
+        ./bin/spark-submit \
+        --class org.apache.spark.examples.SparkPi \
+        --deploy-mode cluster \
+        --driver-memory 4g \
+        --executor-memory 2g \
+        --executor-cores 1 \
+        --queue thequeue \
+        examples/jars/spark-examples*.jar \
+        10
+
+    2.4. Kubernetes
+
+        ./bin/spark-submit \
+            --master k8s://https://<k8s-apiserver-host>:<k8s-apiserver-port> \
+            --deploy-mode cluster \
+            --name spark-pi \
+            --class org.apache.spark.examples.SparkPi \
+            --conf spark.executor.instances=5 \
+            --conf spark.kubernetes.container.image=<spark-imagem> \
+            local:///path/to/examples.jar
+
+3. Resilient Distributed Datasets (RDD)
+    - São uma abstração que oculta a complexidade por trás da computação distribuída, como consistência de
+      estados e recuperaçãoi de falha dos nós do cluster.
+    - Representam coleções de elementes que são distribuídos através de diferentes nós de um cluster.;
+
+4. Parallelize Collections
+
+5. Transformações e Ações
+    5.1. Transformações
+        - As transformações em Spark não são executadas no momento de sua criação, só são executadas quando você realiza uma ação.
+
+    5.2. Ações

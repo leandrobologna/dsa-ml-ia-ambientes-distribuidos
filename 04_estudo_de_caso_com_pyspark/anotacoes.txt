@@ -1,0 +1,39 @@
+1. Definindo o Projeto - Previsão de Manutenção Preventiva de Equipamentos
+    
+    "A  manutenção preventiva é um dos casos de uso de aprendizado de máquina mais comuns, e com os avanços mais recentes em tecnologia
+     da informação, o volume de dados armazenados está crescendo mais rápido neste domínio do que nunca, o que torna necessário aproveitar
+     recursos analíticos em larga escala para transformar grandes quantidades de dados em Inteligência de Negócios."
+    
+    "Neste projeto, vamos trabalhar em um processo passo a passo detalhado de uso do PySPark para demonstrar como abordar a manutenção
+     preventiva para cenários de Big Data em larga escala"
+
+    "O projeto abrange etapas típicas da Ciência de Dados, como ingestão de dados, limpeza, engenharia de recursos, desenvolvimento 
+     de modelos e deploy"
+
+2. Business Case
+
+    "A Manutenção Preditiva está entre as aplicações analíticas avançadas mais procuradas e é cada vez mais vista como um salva-vidas
+     em indústrias de ativos pesados, como fabricação de automóveis e aeroespacial, devido ao seu potencial de proporcionar reduções
+     de custo significativas evitando paralisações e atrasos causados por problemas mecânicos. Muitas empresas estão interessadas
+     em prever tais problemas com antecedência e tomar medidas proativas para evitar problemas antes que ocorram."
+    
+    "O conjunto de dados tem cerca de 2 milhões de registros com 172 colunas simuladas para 1900 máquinas coletadas ao longo de 4 anos."
+
+    "Cada máquina inclui um dispositivo que armazena dados, como avisos, problemas e erros gerados pela máquina ao longo do tempo. Cada
+     registro tem um ID do dispositivo e carimbo de data / hora para cada dia e recursos agregados para esse dia, como o número total de
+     determinado tipo de aviso recebido em um dia."
+    
+    "Quatro colunas categóricas também foram incluídas para demonstrar o tratamento genérico de variáveis categóricas. O objetivo é
+     prever se uma máquina irá falhar nos próximos 7 dias. A última coluna do conjunto de dados indica se uma falha ocorreu e foi relatada
+     nesse dia."
+    
+    "Os dados de entrada são simulados para refletir recursos que são genéricos para a maioria dos cenários de manutenção preventiva."
+
+    "Para estee projeto, trabalhamos com dados totalizando 1,3 GB, mas a mesma estrutura do PySpark pode ser facilmente aplicada 
+     a um conjunto de dados muito maior."
+
+ 3. Provisionamento de Hardware
+    
+    - Caso venhamos a ter problemas de memória na máquina fisíca podemos utilizar o Microsoft Azure:
+      https://docs.microsoft.com/pt-br/azure/machine-learning/data-science-virtual-machine/linux-dsvm-intro
+
